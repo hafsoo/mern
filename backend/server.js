@@ -9,10 +9,7 @@ import dbCon from "./utlis/db.js";
 dotenv.config()
 const app=express()
 dbCon()
-app.use(cors(
-    origin:{" https://mern-dne2.vercel.app/"},
-    credentials:true,
-))
+app.use(cors())
 app.use(express.json())
 app.use('/api',routers)
 
